@@ -1,5 +1,5 @@
 {
-  "name": "fluidfetch",
+  "name": "fluid-fetch",
   "version": "0.0.1",
   "description": "Fetching package tiny enough for client apps. Zero dependencies. Fluid (chainable) API.",
   "keywords": [
