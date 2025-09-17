@@ -1,4 +1,4 @@
-# FluidFetch β
+# fluid-fetch β
 
 A lightweight and flexible HTTP client for JavaScript and TypeScript applications, providing a fluid/chainable API for making HTTP requests. FluidFetch is designed to be tiny yet powerful, making it perfect for client-side applications where bundle size matters.
 
@@ -15,13 +15,13 @@ A lightweight and flexible HTTP client for JavaScript and TypeScript application
 ## Installation
 
 ```bash
-npm install fluidfetch
+npm i fluid-fetch
 ```
 
 ## Basic Usage
 
 ```typescript
-import FluidFetch from 'fluidfetch';
+import FluidFetch from 'fluid-fetch';
 
 const api = new FluidFetch();
 
