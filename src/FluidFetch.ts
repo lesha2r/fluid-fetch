@@ -1,7 +1,7 @@
 import MwManager from './MwManager.js';
 
 // Type definitions
-type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
+type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 // Custom error class for request timeouts
 class TimeoutError extends Error {
@@ -74,6 +74,10 @@ class FluidFetch {
 
   public put<T = any>(url: string, data: any = null, config: RequestConfig = {}): FluidFetchRequest<T> {
     return this._createRequest<T>('PUT', url, data, config);
+  }
+
+  public patch<T = any>(url: string, data: any = null, config: RequestConfig = {}): FluidFetchRequest<T> {
+    return this._createRequest<T>('PATCH', url, data, config);
   }
 
   public delete<T = any>(url: string, config: RequestConfig = {}): FluidFetchRequest<T> {
