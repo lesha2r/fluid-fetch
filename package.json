@@ -10,6 +10,13 @@
     "node-fetch",
     "api-client"
   ],
+  "scripts": {
+    "build": "tsc -b src/",
+    "dev": "nodemon dist/__dev__/index.js",
+    "tsc": "tsc -b src/",
+    "tscw": "tsc --b --watch src/",
+    "prepare": "npm version patch && npm run tsc"
+  },
   "license": "ISC",
   "author": "lesha2r",
   "type": "module",
@@ -25,13 +32,6 @@
     "dist",
     "src"
   ],
-  "scripts": {
-    "build": "tsc -b src/",
-    "dev": "nodemon dist/__dev__/index.js",
-    "tsc": "tsc -b src/",
-    "tscw": "tsc --b --watch src/",
-    "prepare": "npm run build"
-  },
   "devDependencies": {
     "typescript": "^5.8.3",
     "@types/node": "^22.15.18"

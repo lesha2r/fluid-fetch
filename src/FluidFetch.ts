@@ -212,7 +212,7 @@ class FluidFetchRequest<T = any> implements PromiseLike<Response> {
   }
 
   public cancel(): FluidFetchRequest<T> {
-    this.request.abortController.abort();
+    this.request.abortController.abort('Request cancelled by user');
     return this;
   }
 
@@ -258,7 +258,7 @@ class FluidFetchRequest<T = any> implements PromiseLike<Response> {
     // We need to access the private pendingRequests using a method that needs to be added to FluidFetch
     const pendingController = this.fluidFetch.getPendingRequest(cacheKey);
     if (pendingController) {
-      pendingController.abort();
+      pendingController.abort('Cancelled duplicate request');
     }
 
     // Register this request as pending
